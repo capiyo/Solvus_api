@@ -39,7 +39,7 @@ app.use("/workerChats", workerRoutes )
 app.use("/recruiter", recruiterRoutes);
 app.use("/", fileUploadRoute);
 app.use("/auth", Auth)
-app.use("/payment", mpesa)
+//app.use("/payment", mpesa)
 
 // Routes
 app.get("/", (req, res) => {

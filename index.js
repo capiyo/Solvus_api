@@ -6,6 +6,7 @@ import cookieParser from "cookie-parser";
 
 const app = express();
 dotenv.config();
+
 const port = process.env.PORT || 5000;
 
 
@@ -24,7 +25,7 @@ import caseRoutes from "./routes/caseRoutes.js"
 //import workerRoutes from "./routes/workerRoutes"
 import userRoutes from "./routes/userRoutes.js"
 import  workerRoutes from './routes/workerRoutes.js'
-//import  mpesa from "./MPESA/routes/mpesa.js"
+import  paymentRoutes  from "./MPESA/routes/mpesa.js"
 import applicationRoutes from "./routes/applicationRoutes.js"
 import recruiterRoutes from "./routes/recruiterRoutes.js"
 import fileUploadRoute from './routes/fileUploadRoute.js'
@@ -39,7 +40,7 @@ app.use("/workerChats", workerRoutes )
 app.use("/recruiter", recruiterRoutes);
 app.use("/", fileUploadRoute);
 app.use("/auth", Auth)
-//app.use("/payment", mpesa)
+app.use("/payment", paymentRoutes)
 
 // Routes
 app.get("/", (req, res) => {

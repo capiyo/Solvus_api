@@ -1,10 +1,14 @@
-require("dotenv").config();
+//import ("dotenv").config();
+
+
 
 //const prettyjson = require("prettyjson");
-const dateTime = require("node-datetime");
-const axios = require("axios");
-const { mpesaTransactionDBConnector } = require('../mongo/mongo');
-const mpesaTransactionsSchema = require('../schemas/mpesaTransactionsSchema')
+import dotenv from "dotenv";
+import  dateTime from"node-datetime";
+import axios from "axios";
+import   mpesaTransactionDBConnector  from '../config/mongo.js';
+import  mpesaTransactionsSchema from'../models/mpesaTransactionsSchema.js'
+dotenv.config();
 
 
 const passkey = process.env.PASSKEY;
@@ -23,7 +27,7 @@ const newPassword = () => {
 };
 let phoneNumber
 //getting the access token
-exports.token = (req, res, next) => {
+export const token = (req, res, next) => {
   phoneNumber=req.body.phoneNumber;
 
   console.log(req.body.phoneNumber)
@@ -53,7 +57,7 @@ exports.token = (req, res, next) => {
 };
 
 //stkpush
-exports.stkPush = (req, res, next) => {
+export const stkPush = (req, res, next) => {
   const token = req.token;
   const stkUrl = process.env.STK_URL;
   const accountType = process.env.ACCOUNT;
@@ -89,7 +93,7 @@ exports.stkPush = (req, res, next) => {
 };
 
 //webhook endpoint to receive webhooks from safaricom
-exports.mpesaWebhook = (req, res) => {
+ export const mpesaWebhook = (req, res) => {
   let status = req.body.Body.stkCallback.ResultCode;
   console.log(status);
   //check if payment was successful or not

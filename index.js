@@ -25,7 +25,7 @@ import caseRoutes from "./routes/caseRoutes.js"
 //import workerRoutes from "./routes/workerRoutes"
 import userRoutes from "./routes/userRoutes.js"
 import  workerRoutes from './routes/workerRoutes.js'
-import  paymentRoutes  from "./MPESA/routes/mpesa.js"
+import  paymentRoutes  from "./routes/paymentRoute.js"
 import applicationRoutes from "./routes/applicationRoutes.js"
 import recruiterRoutes from "./routes/recruiterRoutes.js"
 import fileUploadRoute from './routes/fileUploadRoute.js'

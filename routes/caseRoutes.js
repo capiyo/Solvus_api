@@ -4,10 +4,12 @@ import Job from '../models/Job.js';
 const router = express.Router();
 
 import { addCase } from '../controllers/Case/assignWorker/addNotification.js';
+import { addAdmin } from '../controllers/Case/admins.js';
 import { getNotification } from '../controllers/Case/assignWorker/getNotification.js';
 //import { getChats } from '../controllers/Case/WorkerChats/getChats.js';
 
 router.post('/addWorkerChats', addCase); 
+router.post("/addAdmin",addAdmin)
 router.get('/getWorkerChats',getNotification ); 
 
 

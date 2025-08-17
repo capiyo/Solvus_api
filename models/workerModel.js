@@ -31,6 +31,6 @@ const WorkerSchema = new mongoose.Schema({
        
 });
 
-const WorkerModel = mongoose.model('Chats', WorkerSchema);
+const WorkerModel = mongoose.model('WorkerChats', WorkerSchema);
 
 export default WorkerModel;

@@ -15,6 +15,7 @@ import {getApplicants} from "../controllers/Job/getApplicants.js"
 import { deleteJob } from '../controllers/Job/deleteJob.js';
 import { updateJob } from '../controllers/Job/updateJob.js';
 import { updateJobByCandidate } from '../controllers/Job/updateJobByCandidate.js';
+import { update } from '../controllers/Job/update.js';
 
 router.get('/all-jobs', getJobs); 
 router.get('/applicants', getApplicants); 
@@ -25,6 +26,7 @@ router.post('/my-jobs',getJobs)
 
 router.post('/post-job', addJob); 
 router.get('/current-job/:jobID', getJob); 
+router.put('/current-job/update', update); 
 router.delete('/delete-job/:id', deleteJob); 
 router.put('/update-job/:id', updateJob);
 router.put('/update-job-by-candidate/', updateJobByCandidate);

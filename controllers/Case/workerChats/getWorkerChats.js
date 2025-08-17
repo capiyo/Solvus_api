@@ -2,7 +2,7 @@ import Chats from '../../../models/chats.js'
 
 const getWorkerChats = async (req, res) => {
     try {
-        const newchat = await WorkerModel.find()
+        const newchat = await Chats.find()
        // .sort({_id:-1})
         res.status(200).json(newchat);
         console.log(newchat)

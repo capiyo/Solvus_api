@@ -1,4 +1,4 @@
-import WorkerModel from '../../../models/workerModel.js'
+import Chats from '../../../models/chats.js'
 
 const getWorkerChats = async (req, res) => {
     try {

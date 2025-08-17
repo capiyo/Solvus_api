@@ -1,24 +1,23 @@
-import  Case from '../../../models/case.js'
+import  Chat from '../../../models/chats.js'
 import uniqid from 'uniqid';
 
 const addChats= async (req, res) => {
-    const { caseId,caseTitle,posterName,posterId,posterEmail,workerId,workerName,workerEmail,status,message} = req.body;
+    const { caseId,posterId,message} = req.body;
 
     console.log("Data on backend");
     console.log(req.body);
 
-    const newcase = new Case({
+    const newChat = new Chat({
         caseId,
-        caseTitle,
-        posterName,
-        posterId,posterEmail,workerId,workerName,workerEmail,status,message
+        message,
+        posterId,
       
     });
 
     try {   
-        await newcase.save();
+        await newChat.save();
         //console.log(job)
-        res.status(201).json(newcase);
+        res.status(201).json(newChat);
     } catch (error) {
         console.log(error)
         res.status(409).json({ message: error.message });

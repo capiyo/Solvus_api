@@ -69,7 +69,7 @@ export const stkPush = (req, res, next) => {
     Password: newPassword(),
     Timestamp: formated,
     TransactionType: "CustomerPayBillOnline",
-    Amount: "1",
+    Amount: "10",
     PartyA: phone,
     PartyB: shortCode,
     PhoneNumber: phone,

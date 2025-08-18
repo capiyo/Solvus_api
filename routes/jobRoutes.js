@@ -16,6 +16,7 @@ import { deleteJob } from '../controllers/Job/deleteJob.js';
 import { updateJob } from '../controllers/Job/updateJob.js';
 import { updateJobByCandidate } from '../controllers/Job/updateJobByCandidate.js';
 import { update } from '../controllers/Job/update.js';
+import { rooms } from '../controllers/Job/rooms.js';
 
 router.get('/all-jobs', getJobs); 
 router.get('/applicants', getApplicants); 
@@ -23,6 +24,7 @@ router.get("/getlikes/:jobId",getLikes)
 router.post('/addlikes',addlikes)
 router.post('/add-applicants',addApplicants)
 router.post('/my-jobs',getJobs)
+router.get('/getRooms/:_id',rooms)
 
 router.post('/post-job', addJob); 
 router.get('/current-job/:jobID', getJob); 

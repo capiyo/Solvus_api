@@ -4,6 +4,7 @@ import Job from '../../models/Job.js'
 const getJob = async (req, res) => {
     try {
         const jobId = req.params.jobID;
+        console.log(jobId)
        // const jobId=new mongoose.Types.ObjectId(myId)
       //console,log(typeof(jobId))
         const job = await Job.findById(jobId);

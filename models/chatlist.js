@@ -1,30 +1,35 @@
 import mongoose from 'mongoose';
 
-const ChatsSchema = new mongoose.Schema({
+const Chatlist= new mongoose.Schema({
 
-    caseId:{
+    jobId:{
         type:String,
         required:true,
     },
-    message:{
+    jobTitle:{
         type:String,
         required:true
     },
 
-    posterId:{
+    role:{
         type:String,
         required:true
     },
-
-  role:{
+    budget:{
+        type:String,
+        required:true
+    },
+  
+        status:{
         type:String,
         required:true
     }
+  
     
    
        
 });
 
-const Chat = mongoose.model('Chats', ChatsSchema);
+const Chat = mongoose.model('Chatlist', Chatlist);
 
 export default Chat;

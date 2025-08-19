@@ -1,17 +1,14 @@
-import  Chat from '../../../models/chats.js'
+import  Chatlist from '../../../models/chatlist.js'
 import uniqid from 'uniqid';
 
-const addChats= async (req, res) => {
-    const { caseId,posterId,message,role} = req.body;
+const addChatlist= async (req, res) => {
+    const { jobId,budget,status,role, jobTitle} = req.body;
 
     console.log("Data on backend");
-    console.log(req.body);
+    //console.log(req.body);
 
-    const newChat = new Chat({
-        caseId,
-        message,
-        posterId,
-        role
+    const newChat = new Chatlist({
+         jobId,budget,status,role, jobTitle
       
     });
 
@@ -27,4 +24,4 @@ const addChats= async (req, res) => {
 
 
 
-export {addChats};
+export {addChatlist};

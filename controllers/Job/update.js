@@ -12,7 +12,7 @@ const update = async (req, res) => {
           //  { $push: { applicants: { applicant: candidateID, status:status } } },
             //{ new: true } // To return the updated document
 
-            myUpdate.status = req.body.status;
+           // myUpdate.status = req.body.status;
             myUpdate.agentId=req.body.agentId
     await myUpdate.save();
         

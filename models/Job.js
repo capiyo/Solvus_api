@@ -15,6 +15,16 @@ const JobSchema = new mongoose.Schema({
         required:true
 
     },
+        agentId:{
+        type:String,
+        required:true
+
+    },
+        adminId:{
+        type:String,
+        required:true
+
+    },
     jobTitle: {
         type: String,
         required: true

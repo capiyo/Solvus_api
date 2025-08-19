@@ -6,14 +6,15 @@ const router = express.Router();
 import { addCase } from '../controllers/Case/assignWorker/addNotification.js';
 import { addAdmin } from '../controllers/Case/admins.js';
 import { addChats } from '../controllers/Case/workerChats/addChats.js';
-import { getNotification } from '../controllers/Case/assignWorker/getNotification.js';
+//import { getNotification } from '../controllers/Case/assignWorker/getNotification.js';
 import { getWorkerChats } from '../controllers/Case/workerChats/getWorkerChats.js';
+import { getNotification } from '../controllers/Case/getNotification.js';
 //import { getChats } from '../controllers/Case/WorkerChats/getChats.js';
 
 router.post('/addWorkerChats', addChats); 
 router.post("/addAdmin",addAdmin)
 router.get('/getWorkerChats',getWorkerChats ); 
-router.get('/getNotification',getNotification ); 
+router.get('/getNotifications/:userId',getNotification); 
 
 
 

@@ -3,6 +3,7 @@ import Job from '../../models/Job.js'
 
 const update = async (req, res) => {
     try {
+     //console.log(reached)
         //const { status } = req.body.status;
 
         // Find the job by jobId
@@ -23,6 +24,7 @@ const update = async (req, res) => {
 
         res.status(200).json(myUpdate);
     } catch (error) {
+     console.log(error)
         res.status(500).json({ error: 'Failed to update job by candidate' });
     }
 }

@@ -2,7 +2,7 @@ import Job from '../../models/Job.js'
 import uniqid from 'uniqid';
 
 const addJob = async (req, res) => {
-    const { jobTitle,posterId,bossPhone,status,posterName,postedTime,postedDay,location,description,budget,deadline} = req.body;
+    const { jobTitle,adminId,agentId,posterId,bossPhone,status,posterName,postedTime,postedDay,location,description,budget,deadline} = req.body;
 
     console.log("Data on backend");
     console.log(req.body);
@@ -14,6 +14,7 @@ const addJob = async (req, res) => {
        postedTime,
        posterName,
        bossPhone,
+       adminId,agentId,
        location,
        status,
        deadline,

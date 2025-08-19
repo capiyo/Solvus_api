@@ -22,7 +22,7 @@ const JobSchema = new mongoose.Schema({
     },
         adminId:{
         type:String,
-        required:true
+        required:false
 
     },
     jobTitle: {

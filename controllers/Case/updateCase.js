@@ -5,13 +5,15 @@ const update = async (req, res) => {
     try {
      //console.log(reached)
         //const { status } = req.body.status;
+        console.log(req.body.caseId)
 
         // Find the job by jobId
-        const myUpdate = await Case.find({"caseId":req.params.caseId})
+        const myUpdate = await Case.findById(req.body.caseId)
 
            // jobID,
           //  { $push: { applicants: { applicant: candidateID, status:status } } },
             //{ new: true } // To return the updated document
+            console.log(myUpdate)
 
            myUpdate.status = req.body.status;
     await myUpdate.save();

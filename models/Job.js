@@ -17,7 +17,7 @@ const JobSchema = new mongoose.Schema({
     },
         agentId:{
         type:String,
-        required:true
+       // required:true
 
     },
         adminId:{
